@@ -1,0 +1,44 @@
+{
+  "name": "ES6-practice",
+  "version": "1.0.0",
+  "description": "一个用于研究和练习ECMAScript 6及以上版本的demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevieTaylor/ES6-practice.git"
+  },
+  "keywords": [],
+  "author": "Stevie Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevieTaylor/ES6-practice/issues"
+  },
+  "homepage": "https://github.com/StevieTaylor/ES6-practice#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.1",
+    "css-loader": "^3.4.2",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "babel-loader": "^8.0.6",
+    "webpack-merge": "^4.2.2",
+    "webpack-parallel-uglify-plugin": "^1.1.2"
+  }
+}
