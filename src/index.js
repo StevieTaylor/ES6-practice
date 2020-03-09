@@ -4,5 +4,5 @@
 // import './chapter/promise/irreversible'; // promise状态的不可逆性
 // import './chapter/promise/chain'; // promise的链式调用
 // import './chapter/promise/exception'; // promise的异常处理
-import './chapter/promise/resolve'; // Promise.resolve()
-
+// import './chapter/promise/resolve'; // Promise.resolve()
+import './chapter/promise/unboxing'; // Promise的拆箱
