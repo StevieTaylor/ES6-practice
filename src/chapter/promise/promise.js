@@ -22,36 +22,6 @@ let promise = new Promise((resolve, reject) => {
 promise.then((v) => v).catch((e) => console.error(e));
 
 /**
- * 三、Promise的立即执行性：当Promise对象被创建时就立即执行被当作promise参数传入的函数
- *        Promise的构造函数是同步执行的，promise.then()是异步执行的
- */
-// 以下console.log()执行顺序是 1->2->3
-let flag_execute = true;
-let promiseExecute = new Promise((resolve, reject) => {
-  console.log('create a new promise'); // 1
-  if (flag_execute) {
-    resolve('success');
-  } else {
-    reject('error');
-  }
-});
-promiseExecute.then((value) => console.log('status:', value)); // 3
-console.log('execute synchronized function'); // 2
-
-/**
- * 四、Promise的生命周期：有3种状态：
- *        1. pending：初始态
- *        2. fulfilled：成功态，异步操作成功
- *        3. rejected：失败态，异步操作失败
- */
-let pending = new Promise((resolve, reject) => {});
-console.log(pending);
-let fulfilled = new Promise((resolve, reject) => resolve('success'));
-console.log(fulfilled);
-let rejected = new Promise((resolve, reject) => reject('error'));
-console.log(rejected);
-
-/**
  * 用promise加载图片
  * @param {*} imgSrc
  */
