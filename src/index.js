@@ -6,4 +6,5 @@
 // import './chapter/promise/exception'; // promise的异常处理
 // import './chapter/promise/resolve'; // Promise.resolve()
 // import './chapter/promise/unboxing'; // Promise的拆箱
-import './chapter/async-await/async-await';
+// import './chapter/async-await/async-await'; // async/await的使用方法
+import './chapter/let-const-var/variable-lifecycle';
