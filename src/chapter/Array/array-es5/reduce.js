@@ -1,3 +1,4 @@
+import { isArray } from '../../../utils/type/type';
 /**
  *  一、array.reduce(callback(acc, cur, index?, array?), initialValue?)
  *       callback -> reducer(accumulator, currentValue, currentIndex?, sourceArray?)，参数的含义：
@@ -9,30 +10,28 @@
  */
 
 /**
-  *  二、有initialValue和没有initialValue的情况：
-  *         1.有initialValue时，accumulator的初始取值为initialValue，currentValue为array[0]
-  *         2.无initialValue时，accumulator的初始取值为array[0]，currentValue为array[1]
-  */
-const array = [1,2,3,4];
+ *  二、有initialValue和没有initialValue的情况：
+ *         1.有initialValue时，accumulator的初始取值为initialValue，currentValue为array[0]
+ *         2.无initialValue时，accumulator的初始取值为array[0]，currentValue为array[1]
+ */
+const array = [1, 2, 3, 4];
 const reducer = (accumulator, curValue, curIndex, array) => {
   return accumulator + curValue;
 };
 console.log(array.reduce(reducer)); // 10
-console.log(array.reduce(reducer,10)); // 20
+console.log(array.reduce(reducer, 10)); // 20
 
 /**
-  *  三、reduce的使用场景
-  */
+ *  三、reduce的使用场景
+ */
 // 1. 求数组里所有元素的和
-const ArraySum = (array)=>{
-
-}
-console.log(typeof array);
+const ArraySum = (array) => {};
+console.log(isArray({}));
 
 /**
  *  实现一个reduce
  */
-Array.prototype._reduce = function (func, initialValue) {
+Array.prototype._reduce = function(func, initialValue) {
   var array = Array.prototype.slice.call(this);
   var result;
   var startIndex;
@@ -42,4 +41,4 @@ Array.prototype._reduce = function (func, initialValue) {
     result = func.call(null, result, array[i], i, this);
   }
   return result;
-}
+};
