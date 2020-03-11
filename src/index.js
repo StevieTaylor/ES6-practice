@@ -8,4 +8,4 @@
 // import './chapter/promise/unboxing'; // Promise的拆箱
 // import './chapter/async-await/async-await'; // async/await的使用方法
 // import './chapter/let-const-var/variable-lifecycle'; // 变量的生命周期和变量提升
-import './chapter/Array/array-es5.js';
+import './chapter/Array/array-es5/reduce';
