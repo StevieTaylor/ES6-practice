@@ -18,20 +18,64 @@ const array = [1, 2, 3, 4];
 const reducer = (accumulator, curValue, curIndex, array) => {
   return accumulator + curValue;
 };
-console.log(array.reduce(reducer)); // 10
-console.log(array.reduce(reducer, 10)); // 20
+console.log('无initialValue:', array.reduce(reducer)); // 10
+console.log('有initialValue:', array.reduce(reducer, 10)); // 20
 
 /**
  *  三、reduce的使用场景
  */
 // 1. 求数组里所有元素的和
-const ArraySum = (array) => {};
-console.log(isArray({}));
+const ArraySum = (array) => {
+  if (isArray(array)) {
+    return array.reduce(function (acc, cur) {
+      return acc + cur;
+    }, 0)
+  }
+};
+const arr_sum = [5, 6, 7, 8, 9];
+console.log(ArraySum(arr_sum)); // 35
+
+// 2. 二维数组转化为一维数组
+const Flatten = (array) => {
+  return array.reduce((acc, value) => {
+    return acc.concat(isArray(value) ? Flatten(value) : value)
+  }, [])
+}
+const arr_flat = [[1, 2], [3, 4, 5], [6, 7, 8, 9]];
+const arr_flat2 = [1, [2, 3], [4, 5, [6, 7, 8]]];
+console.log(Flatten(arr_flat));
+console.log(Flatten(arr_flat2));
+
+// 3. 统计数组中每个元素出现的次数
+const CountTimes = (array) => {
+  return array.reduce((acc,item)=>{
+      if(item in acc){
+          acc[item]++;
+      }else{
+        acc[item]=1;
+      }
+      return acc;
+  },{})
+}
+let arr_names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice', 'Bruce', 'Bruce'];
+console.log(CountTimes(arr_names));
+
+// 4. reduce数组去重
+const ArrayUnique=(array)=>{
+   return array.reduce((acc,item)=>{
+     if(!acc.includes(item)){
+       acc.push(item);
+     }
+     return acc;
+   },[])
+}
+let arr_unique = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd'];
+console.log(ArrayUnique(arr_unique));
 
 /**
- *  实现一个reduce
+ *  四、实现一个reduce
  */
-Array.prototype._reduce = function(func, initialValue) {
+Array.prototype._reduce = function (func, initialValue) {
   var array = Array.prototype.slice.call(this);
   var result;
   var startIndex;

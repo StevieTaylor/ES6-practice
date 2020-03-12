@@ -42,8 +42,8 @@ export function isBoolean(b) {
   return type(b) === 'boolean';
 }
 
-export function isSymbol(s) {
-  return type(s) === 'symbol';
+export function isSymbol(sym) {
+  return type(sym) === 'symbol';
 }
 
 export function isArray(array) {
