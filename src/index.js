@@ -11,4 +11,8 @@
 // import './utils/type/type.test';
 // import './chapter/Array/array-es5/reduce'; // es5方法reduce
 // import './chapter/Array/array-es6/flat'; // es2019方法flat
-import './chapter/observable/observable'; // observable的实现
+// import './chapter/observable/observable'; // observable的实现
+// import './chapter/destructuring/destructuring'; // 解构赋值
+import './chapter/module/ES6_module'; // es6模块系统
+import './chapter/module/ES6_module_import'; // es6模块系统
+import './chapter/module/ES6_module_mixin'; // es6模块系统
