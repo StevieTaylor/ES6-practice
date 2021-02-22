@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-17 18:50:07
- * @LastEditTime: 2021-01-17 23:06:49
+ * @LastEditTime: 2021-01-18 15:20:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \ES6-practice\src\chapter\module\ES6_module_import.js
@@ -87,7 +87,7 @@ console.log('module without default:', module);
 
 /**
  * - 七、模块的动态加载 import()
- * -        1. 出现背景：import语句是编译时加载，require是运行时加载，需要一个方案来实现在运行时动态记载模块
+ * -        1. 出现背景：import语句是编译时加载，require是运行时加载，需要一个方案来实现在运行时动态加载模块
  * -        2. import() 返回一个Promise对象，运行时执行
  * -        3. 使用场景：按需加载、条件加载、动态模块路径
  */
